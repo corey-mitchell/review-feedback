@@ -1,8 +1,14 @@
 # review-feedback
 An application designed to allow employees to submit feedback toward each other's performance review.
 
+### Some assumptions made
+* I am assuming that the admin will want to assign multiple employees to review one person. Therefore, the admin can assign multiple people to review a certain employee then, the admin can see everyone's feedback.
+
+* The admin may want delete reviews so I am adding that feature as well
+
+
 ## Demo
-You may view the application as is on heroku by clicking [here]().
+You may view the application as is on heroku by clicking [here](https://employee-reviewer-plus.herokuapp.com/).
 
 ## What it should look like
 
@@ -17,7 +23,7 @@ Lastly, an admin should be able to assign another employee to participate in ano
 
 ## Technologies Used:
 
-This will be a full-stack, MERN application. Most of the technologies will be limited to MongoDB (with Mongoose), React, NodeJS and Heroku for deployment.
+This is a full-stack, MERN application. Most of the technologies will be limited to MongoDB (with Mongoose), React, NodeJS and Heroku for deployment.
 
 Should I use any additional techonologies, I will add them here.
 
