@@ -16,11 +16,11 @@ router.route('/create')
     // Send POST request to controller
     .post(controller.createEmployee);
 
-// Route "/api/employee/:id", for any action to specific user
+// Route "/api/employee/:id", for any action to specific employee
 router.route('/:id')
-    // Send PUT request to controller, to update user
+    // Send PUT request to controller, to update employee
     .put(controller.updateEmployee)
-    // Send DELETE request to controller, to delete user
+    // Send DELETE request to controller, to delete employee
     .delete(controller.deleteEmployee);
 
 // Exports Router

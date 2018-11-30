@@ -6,6 +6,12 @@ const Schema = mongoose.Schema
 
 // Create new Review schema
 const ReviewSchema = new Schema ({
+    // Employee that the review is assigned to
+    employee: {
+        type: Schema.Types.ObjectId,
+        ref: "Employee"
+    },
+
     // Review Description
     description: {
         type: String,

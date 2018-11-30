@@ -46,5 +46,16 @@ module.exports = {
         .then(response => res.json(response))
         // If an error occurs, send error back to client
         .catch(err => res.status(422).json(err));
+    },
+
+    // Method to assign one employee to another employee's review.
+    // **This is passing two IDs at the moment, just so that I can write the route. But once everything is built out, this will probably update things differently.
+    assignToReview: (req, res) => {
+        // Find Employee who's ID is equal to req.params.employeeID and push req.params.reviewID into 'otherEmployeeReviews' array
+        db.Employee.findOneAndUpdate({_id: req.params.employeeID}, { $addToSet: { otherEmployeeReviews: req.params.reviewID }}, { safe: true, upsert: true, new: true})
+            // If employee was successfully updated with with new review, return updated employee info to client
+            .then(employee => res.json(employee))
+            // Else if an error occurs, send error back to client
+            .catch(err => res.status(422).json(err));
     }
 };

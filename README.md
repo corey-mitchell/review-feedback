@@ -4,7 +4,9 @@ An application designed to allow employees to submit feedback toward each other'
 ### Some assumptions made
 * I am assuming that the admin will want to assign multiple employees to review one person. Therefore, the admin can assign multiple people to review a certain employee then, the admin can see everyone's feedback.
 
-* The admin may want delete reviews so I am adding that feature as well
+* The admin may want delete reviews so I am adding that feature as well.
+
+* The Employees may not want to keep seeing reviews that they have submitted feedback on. So, if time allows, then I would like to delete the reviews from the employee's view once they have submitted feedback.
 
 
 ## Demo
@@ -35,16 +37,19 @@ This application is utilizing a MVC architectural pattern. You can view the flow
 
 ## Running Locally
 
-To run this application locally, you must first create a Mongo Database name 'reviews'.
-
-Next, clone the application. Then CD into the application folder and run yarn install. (Just copy the below lines into your terminal)
+1. First, clone the application, CD into the application folder and run yarn install. (Just copy the below lines into your terminal).
 ```
 git clone git@github.com:corey-mitchell/review-feedback.git
 cd review-feedback
 yarn install
 ```
 
-Once yarn is finished downloading all of your dependencies, run:
+2. Then you will need to either, create a local Mongo Database named, 'reviews' or you may create a database of your choosing and replace line 21 in the server.js folder with the line below. (Replacing the placeholder with the name of your personal database).
+```
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/[your database name here]";
+```
+
+3. Once yarn is finished downloading all of your dependencies, and you have set up your Mongo database, run the line below in your terminal.
 ```
 yarn start
 ```

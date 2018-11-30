@@ -26,7 +26,7 @@ module.exports = {
     // Update Employee Method
     updateEmployee: (req, res) => {
         // Find Employee by ID and update name to req.body.name
-        db.Employee.findOneAndUpdate({_id: req.params.id}, {$set: {name: req.body.name}}, {new: true})
+        db.Employee.findOneAndUpdate({_id: req.params.id}, {$set: { name: req.body.name }}, {new: true})
             // Then send Updated Employee back to client
             .then(Employee => res.json(Employee))
             // If an error occurs, send the err to the client  instead

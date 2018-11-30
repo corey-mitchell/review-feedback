@@ -23,6 +23,11 @@ router.route('/:id')
     // DELETE request to the controller to delete specific review
     .delete(controller.deleteReview);
 
+    
+// Route "/api/review/:employeeID/:reviewID", for assigning one employee to another employee's review
+router.route('/:employeeID/:reviewID')
+    .put(controller.assignToReview);
+
 
 // Export Router
 module.exports = router;
