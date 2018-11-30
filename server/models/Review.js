@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // Save a reference to the mongoose schema constructor
-const Schema = mongoose.schema
+const Schema = mongoose.Schema
 
 // Create new Review schema
 const ReviewSchema = new Schema ({
@@ -14,8 +14,12 @@ const ReviewSchema = new Schema ({
         type: String,
         required: true
     },
+    isReviewed: {
+        type: Boolean,
+        default: false
+    },
     reviewer: {
-        type: Schema.Types.name,
+        type: Schema.Types.ObjectId,
         ref: 'Employee'
     }
 });

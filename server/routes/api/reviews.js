@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 // Require Controller
-const constroller = require('(insert controller here)');
+const controller = require('../../controllers/reviewController');
 
 // Route "/api/review/(insert route param here)"
 router.route('(insert route param here)');

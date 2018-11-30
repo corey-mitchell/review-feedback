@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 // Require Controller
-const controller = require('(require controller here)');
+const controller = require('../../controllers/employeeController');
 
 // Route "/api/employee/(insert route param here)"
 router.route('(insert route param here)')

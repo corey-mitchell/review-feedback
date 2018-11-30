@@ -9,7 +9,13 @@ const EmployeeSchema = new Schema({
     name: {
         type: String,
         required: true
-    }
+    },
+    reviews: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Review"
+        }
+    ]
 });
 
 // Creates model from the above Schema

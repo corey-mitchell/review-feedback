@@ -4,9 +4,11 @@
   "description": "An application designed to allow employees to submit feedback toward each other's performance review.",
   "main": "server.js",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "create-react-app": "^2.1.1",
     "express": "^4.16.4",
-    "mongoose": "^5.3.14"
+    "mongoose": "^5.3.14",
+    "nodemon": "^1.18.7"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,7 +16,6 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "install": "cd client && yarn install",
     "build": "cd client && yarn run build",
     "heroku-postbuild": "cd client && yarn install && yarn run build"
   },
