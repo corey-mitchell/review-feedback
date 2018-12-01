@@ -35,7 +35,7 @@ class Navbar extends React.Component {
                         </Typography>
 
                         {/* Home Button */}
-                        <Button color="inherit" onClick={this.props.openLandingPage}>Go Home</Button>
+                        <Button color="inherit" onClick={this.props.openHomePage}>Go Home</Button>
                     </Toolbar>
                 </AppBar>
             </div>

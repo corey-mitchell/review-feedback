@@ -8,9 +8,9 @@ const styles = {
     }
 };
 
-// Create Landing Component
-// I call the component landing because this is the component the site initally loads with.
-class Landing extends React.Component {
+// Create HomePage Component
+// I call the component 'HomePage' because this is the component the site initally loads with.
+class HomePage extends React.Component {
     // Render Component
     render() {
         return (
@@ -30,4 +30,4 @@ class Landing extends React.Component {
 };
 
 // Export Component
-export default Landing;
+export default HomePage;

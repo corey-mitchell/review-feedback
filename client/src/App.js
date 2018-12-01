@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 // Import components
 import Navbar from './components/Navbar';
 import Main from './components/Main';
-import Landing from './components/Landing';
-import Employee from './components/Employee';
-import Admin from './components/Admin';
+import HomePage from './components/pages/HomePage';
+import EmployeePage from './components/pages/EmployeePage';
+import AdminPage from './components/pages/AdminPage';
 
 class App extends Component {
   // Creating State
@@ -14,8 +14,8 @@ class App extends Component {
     user: ''
   };
 
-  // Function for setting user state to empty string to go back to landing page
-  openLandingPage = () => {
+  // Function for setting user state to empty string to go back to home page
+  openHomePage = () => {
     this.setState({user: ''})
   };
 
@@ -35,22 +35,23 @@ class App extends Component {
     const componentSwitcher = () => {
       switch (this.state.user) {
         case 'Employee':
-          return <Employee />
+          return <EmployeePage />
 
         case 'Admin':
-          return <Admin />
+          return <AdminPage />
       
         default:
-          return <Landing openEmployeePage={this.openEmployeePage} openAdminPage={this.openAdminPage}/>
+          return <HomePage openEmployeePage={this.openEmployeePage} openAdminPage={this.openAdminPage}/>
       }
     };
 
+    // Returns App
     return (
       <div className="App">
         {/* Render Navbar */}
-        <Navbar openLandingPage={this.openLandingPage}/>
+        <Navbar openHomePage={this.openHomePage}/>
 
-        {/* Render Main Component */}
+        {/* Render Component for housing User Components */}
         <Main>
           {componentSwitcher()}
         </Main>
@@ -59,4 +60,5 @@ class App extends Component {
   }
 }
 
+// Exports App
 export default App;
