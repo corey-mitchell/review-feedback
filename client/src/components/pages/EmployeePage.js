@@ -46,7 +46,6 @@ class EmployeePage extends React.Component {
         fetch(`/api/employee/${inputValue}`)
             .then(res => res.json())
             .then(employeeData => {
-                console.log(employeeData)
                 // If data comes back with a CastError, send error message to client
                 if(employeeData.name === 'CastError') {
                     this.setState({errorMessage: 'Incorrect ID'});
@@ -96,8 +95,8 @@ class EmployeePage extends React.Component {
                     {/* Component for housing employee's reviews */}
                     <Main>
                         {/* Maps thru the 'employees' state and returns an Employee component */}
-                        {this.state.employee.personalReviews.map(review => {
-                            return <EmployeeReview  key={review._id} description={review.description}/>
+                        {this.state.employee.personalReviews.map(reviewID => {
+                            return <EmployeeReview  key={reviewID} id={reviewID} />
                         })}
                     </Main>
                     
