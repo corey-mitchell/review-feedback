@@ -22,12 +22,6 @@ const styles = {
 
 // Creates Navbar Component
 class Navbar extends React.Component {
-    // Function to reload the page to switch between Employee and Admin
-    goHome = () => {
-        // Reloads page
-        window.location.reload();
-    };
-
     // Renders Component to DOM
     render() {
         return (
@@ -41,7 +35,7 @@ class Navbar extends React.Component {
                         </Typography>
 
                         {/* Home Button */}
-                        <Button color="inherit" onClick={this.goHome}>Go Home</Button>
+                        <Button color="inherit" onClick={this.props.openLandingPage}>Go Home</Button>
                     </Toolbar>
                 </AppBar>
             </div>
