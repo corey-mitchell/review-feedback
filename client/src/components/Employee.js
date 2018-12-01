@@ -59,6 +59,11 @@ class Employee extends React.Component {
         }).then(this.props.getEmployees())
     };
 
+    // Function for opening reviews page
+    openReviews = () => {
+        this.props.setCurrentEmployee(this.props.id)
+    };
+
     // Render Component
     render() {
         // If state is NOT updating then display user information...
@@ -70,7 +75,7 @@ class Employee extends React.Component {
                     <p className="col-4">ID: {this.props.id}</p>
                     <p className="col-3">Name: {this.props.name}</p>
                     <div className="col-4">
-                        <button className="btn btn-primary" style={{marginRight: 10}}>Reviews</button>
+                        <button className="btn btn-primary" style={{marginRight: 10}} onClick={this.openReviews}>Review</button>
                         <button className="btn btn-success" onClick={this.isUpdatingTrue}>Update Info</button>
                     </div>
                 </div>

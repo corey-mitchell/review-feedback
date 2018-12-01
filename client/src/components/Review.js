@@ -7,8 +7,8 @@ class EmployeePage extends React.Component {
     render() {
         return (
             // Creates a card body
-            <div className="card card-body mx-auto my-5 text-center">
-                <h1>Employee Page Comming Soon</h1>
+            <div className="row mx-auto my-1 text-left">
+                <h1>Reviews Comming Soon</h1>
             </div>
         );
     };
