@@ -91,6 +91,8 @@ class AdminPage extends React.Component {
                     })}
                 </Main>
 
+                <br /><br />
+                
                 {/* For for Creating New Employee */}
                 <form id="newEmployeeForm" className="row" onSubmit={this.createEmployee}>
                     <div className="col-6">

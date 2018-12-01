@@ -8,6 +8,8 @@ An application designed to allow employees to submit feedback toward each other'
 
 * The Employees may not want to keep seeing reviews that they have submitted feedback on. So, if time allows, then I would like to delete the reviews from the employee's view once they have submitted feedback.
 
+* Since we are assigning reviewers and not letting every employee view every other employee's reviews, I take it there needs to be at least a little bit of privacy. So the employees will have to submit their IDs in order to view their reviews. This should provide a simple form of security for the employees.
+
 
 ## Demo
 You may view the application as is on heroku by clicking [here](https://employee-reviewer-plus.herokuapp.com/).

@@ -35,16 +35,22 @@ class Employee extends React.Component {
         // Prevent default action of submit
         event.preventDefault();
 
-        // Fetch request for updating user information
-        fetch(`/api/employee/${this.props.id}`, {
-            method: "PUT",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: document.getElementById('employeeNameInput').value
-            })
-        })
+        const inputValue = document.getElementById('employeeNameInput').value;
+
+        if(inputValue === '') {
+            this.setState({updating: false});
+        } else{
+            // Fetch request for updating employee information
+            fetch(`/api/employee/${this.props.id}`, {
+                method: "PUT",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: inputValue
+                })
+            });
+        };    
 
         // Set state updating to false then displays employees with updated information
         this.setState({updating: false}, ()=>{this.props.getEmployees()})
@@ -52,7 +58,7 @@ class Employee extends React.Component {
 
     // Function for deleting employee
     deleteEmployee = () => {
-        // Deletes user from database
+        // Deletes employee from database
         fetch(`/api/employee/${this.props.id}`, {
             method: 'DELETE'
             // Then refreshes the employees

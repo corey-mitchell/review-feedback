@@ -18,15 +18,16 @@ router.route('/:id')
     .get(controller.getReviewBody)
 
     // PUT request to the controller to update specific review
-    .put(controller.updateReview)
+    .put(controller.updateReview);
+
+    
+// Route "/api/review/:employeeID/:reviewID"
+router.route('/:employeeID/:reviewID')
+    // PUT request to the controller for assigning one employee to another employee's review
+    .put(controller.assignToReview)
 
     // DELETE request to the controller to delete specific review
     .delete(controller.deleteReview);
-
-    
-// Route "/api/review/:employeeID/:reviewID", for assigning one employee to another employee's review
-router.route('/:employeeID/:reviewID')
-    .put(controller.assignToReview);
 
 
 // Export Router
