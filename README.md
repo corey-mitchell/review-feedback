@@ -16,18 +16,18 @@ You may view the application as is on heroku by clicking [here](https://employee
 
 ### Employee View
 
-Employees should be able to see a list of reviews needing feedback. They should then be able to provide the feed back.
+Employees should be able to see a list of personal reviews needing feedback. They should then be able to provide the feedback. The employees will also be able to see reviews that they have been assigned to provide feedback on. Likewise, they will then be able to provide said feedback.
 
 ### Admin View
 
-An admin should be able to view as well as add, update and remove all employees. Admin should also be able to view, add and update reviews.
-Lastly, an admin should be able to assign another employee to participate in another employee's review.
+An admin should be able to view as well as add, update and remove any and all employees. Admin should also be able to view, add and update reviews.
+Lastly, an admin should be able to assign one employee to participate in another employee's review.
 
 ## Technologies Used:
 
-This is a full-stack, MERN application. Most of the technologies will be limited to MongoDB (with Mongoose), React, NodeJS and Heroku for deployment.
+This is a full-stack, MERN application. Most of the technologies will be limited to JavaScript, MongoDB (with Mongoose), React, NodeJS and Heroku for deployment, using the mLabs extension for cloud DB.
 
-Should I use any additional techonologies, I will add them here.
+The front end utilizes Bootstrap for easy styling and the navbar is a component from material-ui that I pulled for this application.
 
 ### The API
 

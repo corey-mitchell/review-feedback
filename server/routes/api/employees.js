@@ -18,8 +18,12 @@ router.route('/create')
 
 // Route "/api/employee/:id", for any action to specific employee
 router.route('/:id')
+    // Send GET request to controller, to get employee data
+    .get(controller.getEmployee)
+
     // Send PUT request to controller, to update employee
     .put(controller.updateEmployee)
+
     // Send DELETE request to controller, to delete employee
     .delete(controller.deleteEmployee);
 

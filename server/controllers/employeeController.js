@@ -3,13 +3,23 @@ const db = require('../models');
 
 // Export Methods
 module.exports = {
+    // Get ONE Employee Method
+    getEmployee: (req, res) => {
+        // Target Employee who's ID is equal to req.params.id
+        db.Employee.findOne({_id: req.params.id})
+            // Then send Employee's info back to client
+            .then(Employee => res.json(Employee))
+            // If an error occurs, send the error to the client instead
+            .catch(err => res.status(422).json(err));
+    },
+
     // Get All Employees Method
     getEmployees: (req, res) => {
         // Gather all Employees in DB
         db.Employee.find()
             // Then send Employees back to client
             .then(Employees => res.json(Employees))
-            // If an error occurs, send the err to the client instead
+            // If an error occurs, send the error to the client instead
             .catch(err=> res.status(422).json(err));
     }, 
 
